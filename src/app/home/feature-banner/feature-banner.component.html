@@ -1,0 +1,17 @@
+<div class="feature-banner">
+  <div class="feature-banner__text-group">
+    <span class="feature-banner__overline overline">New Product</span>
+    <h1 class="feature-banner__header">XX99 Mark II Headphones</h1>
+    <p class="feature-banner__paragraph">
+      Experience natural, lifelike audio and exceptional build quality made for
+      the passionate music enthusiast.
+    </p>
+    <app-buttons
+      class="feature-banner__button"
+      [class]="'button-1'"
+      [content]="'See product'"
+      routerLink="productDetail"
+      (click)="setProduct()"
+    ></app-buttons>
+  </div>
+</div>

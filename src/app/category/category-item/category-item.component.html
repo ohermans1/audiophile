@@ -1,0 +1,23 @@
+<div class="category-item">
+  <img
+    [style.order]="this.isEven() ? '1' : '0'"
+    src="./../../../assets/{{ this.productInfo.imgURL }}"
+    alt="{{ this.productInfo.header }}"
+    class="category-item__img"
+  />
+  <div class="category-item__text-container">
+    <span
+      class="category-item__overline overline"
+      *ngIf="this.productInfo.isNew"
+      >New product</span
+    >
+    <h2 class="category-item__header">{{ this.productInfo.header }}</h2>
+    <p class="category-item__paragraph">{{ this.productInfo.description }}</p>
+    <app-buttons
+      [class]="'category-item__button button-1'"
+      [content]="'See product'"
+      routerLink="../productDetail"
+      (click)="setProduct()"
+    ></app-buttons>
+  </div>
+</div>

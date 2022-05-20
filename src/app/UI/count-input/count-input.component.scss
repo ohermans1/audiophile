@@ -1,0 +1,22 @@
+.counter {
+  padding: 1.5rem 2rem;
+  background-color: var(--color-gray-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.3rem;
+  width: 12rem;
+
+  @media (max-width: 800px) {
+    width: 10rem;
+  }
+
+  &__label {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-orange-dark);
+    }
+  }
+}

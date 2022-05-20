@@ -1,0 +1,55 @@
+<div class="header__mobile-background" *ngIf="showMenu">&nbsp;</div>
+
+<header class="header">
+  <img
+    src="./../../../assets/shared/tablet/icon-hamburger.svg"
+    alt="Menu"
+    class="header__menu"
+  />
+  <div class="header__mobile-nav" *ngIf="showMenu">
+    <app-product-group-link></app-product-group-link>
+  </div>
+
+  <img
+    src="./../../../assets/shared/desktop/logo.svg"
+    alt="Audiophile Logo"
+    class="header__logo"
+    routerLink=""
+  />
+  <nav class="header__nav-group">
+    <a class="header__nav-item" routerLink="" (click)="linkClick($event)"
+      >Home</a
+    >
+    <a
+      class="header__nav-item"
+      routerLink="category"
+      (click)="linkClick($event)"
+      >Headphones</a
+    >
+    <a
+      class="header__nav-item"
+      routerLink="category"
+      (click)="linkClick($event)"
+      >Speakers</a
+    >
+    <a
+      class="header__nav-item"
+      routerLink="category"
+      (click)="linkClick($event)"
+      >Earphones</a
+    >
+  </nav>
+  <div class="header__cart-group">
+    <img
+      src="./../../../assets/shared/desktop/icon-cart.svg"
+      alt="Cart Icon"
+      class="header__cart-img"
+    />
+    <div class="header__counter" *ngIf="this.displayCounter">
+      {{ this.cartService.count }}
+    </div>
+  </div>
+
+  <hr class="header__line" />
+</header>
+<app-cart-popup *ngIf="showCart()"></app-cart-popup>

@@ -1,0 +1,92 @@
+<div class="checkout">
+  <a class="checkout__back" (click)="goBack()">Go Back</a>
+  <div class="checkout__content">
+    <div class="checkout__details-section">
+      <h2 class="checkout__main-header">Checkout</h2>
+      <form action="submit" class="checkout__form">
+        <div class="checkout__form-section">
+          <h6 class="checkout__header">Billing Details</h6>
+          <div class="checkout__input-group">
+            <app-text-input [name]="'Name'"></app-text-input>
+            <app-text-input [type]="'email'" [name]="'Email'"></app-text-input>
+            <app-text-input [type]="'number'" [name]="'Phone'"></app-text-input>
+          </div>
+        </div>
+        <div class="checkout__form-section">
+          <h6 class="checkout__header">Shipping Info</h6>
+          <div class="checkout__input-group">
+            <app-text-input
+              [class]="'input text-input__input text-input__input--large'"
+              [name]="'Address'"
+            ></app-text-input>
+            <app-text-input
+              [type]="'number'"
+              [name]="'Postcode'"
+            ></app-text-input>
+            <app-text-input [name]="'City'"></app-text-input>
+            <app-text-input [name]="'Country'"></app-text-input>
+          </div>
+        </div>
+        <div class="checkout__form-section">
+          <h6 class="checkout__header">Payment Details</h6>
+          <div class="checkout__input-group">
+            <app-radio-input
+              [type]="'e-Money'"
+              (sendValue)="recieveValue($event)"
+            ></app-radio-input>
+            <app-radio-input
+              [type]="'Cash'"
+              (sendValue)="recieveValue($event)"
+            ></app-radio-input>
+            <app-text-input
+              *ngIf="!this.cash"
+              [name]="'e-Money Number'"
+            ></app-text-input>
+            <app-text-input
+              *ngIf="!this.cash"
+              [name]="'e-Money PIN'"
+            ></app-text-input>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="checkout__product-section">
+      <h3 class="checkout__product-header">Summary</h3>
+      <app-cart-popup-item
+        *ngFor="let item of this.cartService.items"
+        [item]="item"
+        [displayCounter]="false"
+        [classSmall]="'small'"
+      ></app-cart-popup-item>
+      <div class="checkout__price-group">
+        <span class="checkout__total">Total</span>
+        <span class="checkout__price"
+          >${{ numberWithCommas(this.cartService.totalCost) }}</span
+        >
+      </div>
+      <div class="checkout__price-group">
+        <span class="checkout__total">Shipping</span>
+        <span class="checkout__price">$50</span>
+      </div>
+      <div class="checkout__price-group">
+        <span class="checkout__total">VAT (Included)</span>
+        <span class="checkout__price">${{ numberWithCommas(this.vat) }}</span>
+      </div>
+      <div class="checkout__price-group">
+        <span class="checkout__total">Grand Total</span>
+        <span class="checkout__price checkout__price--orange"
+          >${{ numberWithCommas(this.total) }}</span
+        >
+      </div>
+      <app-buttons
+        class="checkout__button"
+        [class]="'button-1 button-full-width'"
+        [content]="'Continue & Pay'"
+        (click)="this.checkout()"
+      ></app-buttons>
+    </div>
+  </div>
+</div>
+
+<app-checkout-popup *ngIf="this.showPopup"></app-checkout-popup>

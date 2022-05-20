@@ -1,0 +1,35 @@
+.feature-part {
+  display: flex;
+  margin: 3rem var(--style-body-padding);
+  gap: 3rem;
+
+  @media (max-width: 800px) {
+    gap: 0;
+  }
+  @media (max-width: 400px) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: var(--style-border-radius);
+    overflow: hidden;
+    background-color: var(--color-gray-dark);
+    width: 100%;
+
+    &--text {
+      padding-left: 10rem;
+
+      @media (max-width: 400px) {
+        padding: 5rem 10rem;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+}

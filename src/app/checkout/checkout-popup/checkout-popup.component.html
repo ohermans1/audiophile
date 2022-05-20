@@ -1,0 +1,32 @@
+<div class="checkout-popup__background"></div>
+
+<div class="checkout-popup">
+  <div class="checkout-popup__tick">&#10004;</div>
+  <h3 class="checkout-popup__header">Thank you for your order</h3>
+  <span class="checkout-popup__text"
+    >You will receive an email confirmation shortly</span
+  >
+  <div class="checkout-popup__products">
+    <div class="checkout-popup__left">
+      <app-cart-popup-item
+        *ngFor="let item of this.cartService.items"
+        [item]="item"
+        [displayCounter]="false"
+        [classSmall]="'small'"
+      ></app-cart-popup-item>
+      <hr class="checkout-popup__line" />
+      <span class="checkout-popup__other-items">and 2 other item(s)</span>
+    </div>
+    <div class="checkout-popup__right">
+      <span class="checkout-popup__total">GRAND TOTAL</span>
+      <span class="checkout-popup__cost">$5,446</span>
+    </div>
+  </div>
+  <app-buttons
+    class="checkout-popup__button"
+    [class]="'button-1 button-full-width'"
+    [content]="'Back to home'"
+    [routerLink]="'/'"
+    (click)="this.cartService.removeFromCart('all')"
+  ></app-buttons>
+</div>

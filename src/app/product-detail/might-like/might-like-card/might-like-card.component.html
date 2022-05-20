@@ -1,0 +1,15 @@
+<div class="might-like-card">
+  <img
+    src="{{ cardData.url }}"
+    alt="{{ cardData.title }}"
+    class="might-like-card__image"
+  />
+
+  <h4 class="might-like-card__header">{{ cardData.title }}</h4>
+  <app-buttons
+    [class]="'button-1'"
+    [content]="'See product'"
+    routerLink="../{{ this.routerLink }}"
+    (click)="setProduct()"
+  ></app-buttons>
+</div>

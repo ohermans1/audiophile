@@ -1,0 +1,7 @@
+<app-category-header></app-category-header>
+<app-category-item
+  *ngFor="let product of products; let i = index"
+  [productInfo]="product"
+  [count]="i + 1"
+></app-category-item>
+<app-product-group-link></app-product-group-link>

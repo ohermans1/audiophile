@@ -1,0 +1,36 @@
+.category-item {
+  display: flex;
+  gap: var(--style-body-padding);
+  margin: var(--style-body-padding);
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+
+    @media (max-width: 800px) {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__overline {
+    color: var(--color-orange-dark);
+  }
+
+  &__img {
+    width: 50%;
+    border-radius: var(--style-border-radius);
+    @media (max-width: 800px) {
+      margin-bottom: 3rem;
+      margin-top: 4rem;
+      width: 70%;
+    }
+  }
+}

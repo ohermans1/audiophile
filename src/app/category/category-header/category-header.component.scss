@@ -1,0 +1,10 @@
+.category-header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-bg-black);
+  color: var(--color-white);
+
+  &__header {
+    padding: 8rem 0;
+  }
+}

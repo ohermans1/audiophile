@@ -1,0 +1,47 @@
+.bottom-banner {
+  display: flex;
+  gap: 4rem;
+  margin: 10rem var(--style-body-padding);
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    margin: 2rem var(--style-body-padding) 5rem var(--style-body-padding);
+  }
+
+  &__container {
+    border: var(--style-border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+
+    &--text {
+      padding-right: 10rem;
+
+      @media (max-width: 1000px) {
+        padding-right: 2rem;
+      }
+      @media (max-width: 800px) {
+        padding: 0 5rem;
+        text-align: center;
+      }
+
+      @media (max-width: 400px) {
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__img {
+    border-radius: var(--style-border-radius);
+  }
+}

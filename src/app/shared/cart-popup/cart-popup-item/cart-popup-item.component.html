@@ -1,0 +1,21 @@
+<div class="cart-popup-item" *ngIf="item.addedToCart">
+  <img
+    src="./../../../../assets/{{ this.item.imageURL }}"
+    alt=""
+    class="cart-popup-item__image"
+  />
+  <div class="cart-popup-item__text-group">
+    <h6 class="cart-popup-item__title {{ this.classSmall }}">
+      {{ this.item.header }}
+    </h6>
+    <span class="cart-popup-item__price"
+      >${{ numberWithCommas(this.item.cost) }}</span
+    >
+  </div>
+  <div class="cart-popup-item__counter" *ngIf="this.displayCounter">
+    <app-count-input [header]="this.item.header"></app-count-input>
+  </div>
+  <div class="cart-popup-item__count" *ngIf="!this.displayCounter">
+    <span class="cart-popup-item__count-value">x{{ this.item.count }}</span>
+  </div>
+</div>

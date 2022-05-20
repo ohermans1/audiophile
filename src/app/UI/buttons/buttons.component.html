@@ -1,0 +1,9 @@
+<button class="{{ this.class }}">
+  {{ this.content }}
+  <img
+    *ngIf="arrowVisible"
+    src="./../../../assets/shared/desktop/icon-arrow-right.svg"
+    alt="Arrow"
+    routerLink="{{ this.routerLink }}"
+  />
+</button>

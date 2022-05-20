@@ -1,0 +1,51 @@
+<div class="product-detail">
+  <a class="product-detail__back" (click)="goBack()">Go Back</a>
+  <div class="product-detail__container-top">
+    <img
+      src="{{ this.product.imgMainURL }}"
+      alt="{{ this.product.header }} image"
+      class="product-detail__img"
+    />
+    <div class="product-detail__add-to-cart-container">
+      <span class="product-detail__overline overline" *ngIf="this.product.isNew"
+        >New product</span
+      >
+      <h2 class="product-detail__header">{{ this.product.header }}</h2>
+      <p class="product-detail__description">{{ this.product.description }}</p>
+      <span class="product-detail__price"
+        >${{ this.numberWithCommas(this.product.cost) }}</span
+      >
+      <div class="product-detail__buttons-container">
+        <app-count-input [header]="this.product.header"></app-count-input>
+        <app-buttons
+          [class]="'button-1 addcart'"
+          [content]="'Add to Cart'"
+          (click)="this.cartService.submitToCart(this.product.header)"
+        ></app-buttons>
+      </div>
+    </div>
+  </div>
+  <div class="product-detail__container-bottom">
+    <div class="product-detail__features-container">
+      <h2 class="product-detail__features-header">Features</h2>
+      <p class="product-detail__features">{{ this.product.features }}</p>
+    </div>
+    <div class="product-detail__in-box-container">
+      <h2 class="product-detail__in-box-header">In the Box</h2>
+      <div>
+        <div
+          class="product-detail__box-items"
+          *ngFor="let box of this.product.inBox"
+        >
+          <p class="product-detail__in-box-text">
+            <span class="product-detail__in-box-num">{{ this.box.count }}x</span
+            >{{ this.box.name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-gallery [galleryImages]="this.product.galleryImgs"></app-gallery>
+<app-might-like></app-might-like>
+<app-product-group-link></app-product-group-link>

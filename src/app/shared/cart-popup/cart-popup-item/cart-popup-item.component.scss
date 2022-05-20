@@ -1,0 +1,39 @@
+.cart-popup-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  &__image {
+    border-radius: var(--style-border-radius);
+    width: 20%;
+  }
+
+  &__text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 2rem;
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    color: var(--color-black-tint);
+  }
+
+  &__title {
+    @media (max-width: 800px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__count-value {
+    font-size: 1.3rem;
+  }
+}
+
+.small {
+  font-size: 1.3rem;
+}

@@ -1,0 +1,88 @@
+.footer {
+  padding: 5rem var(--style-body-padding) 3rem var(--style-body-padding);
+  background-color: var(--color-black-tint);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+
+  @media (max-width: 800px) {
+    padding: 4rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 0.5rem;
+    width: 15%;
+    background-color: var(--color-orange-dark);
+    top: 0;
+    left: var(--style-body-padding) + 2rem;
+  }
+
+  &__logo-links-group {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__nav-group {
+    display: flex;
+    gap: 1.5rem;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      gap: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__para-icons-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+  &__paragraph {
+    width: 50%;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  &__icons {
+    display: flex;
+    gap: 1.5rem;
+    @media (max-width: 800px) {
+      align-self: flex-end;
+    }
+  }
+  &__icon {
+    filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(121deg)
+      brightness(104%) contrast(101%);
+    cursor: pointer;
+    &:hover {
+      filter: invert(72%) sepia(11%) saturate(4852%) hue-rotate(324deg)
+        brightness(88%) contrast(91%);
+    }
+  }
+
+  &__copyright {
+    @media (max-width: 800px) {
+      margin-top: -3rem;
+    }
+  }
+}

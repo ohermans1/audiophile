@@ -1,0 +1,18 @@
+<div class="product-group-links">
+  <div class="product-group-links__card" *ngFor="let product of products">
+    <img
+      src="./../../../assets/shared/desktop/{{ this.product.imageURL }}.png"
+      alt="{{ this.product.heading }}"
+      class="product-group-links__img"
+    />
+    <h6 class="product-group-links__header">{{ this.product.heading }}</h6>
+    <app-buttons
+      class="product-group-links__button"
+      [class]="'button-3'"
+      [content]="'Shop'"
+      [arrowVisible]="true"
+      (click)="linkClick(this.product.heading)"
+      [routerLink]="'../category'"
+    ></app-buttons>
+  </div>
+</div>

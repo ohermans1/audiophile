@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.5rem var(--style-body-padding) 0 var(--style-body-padding);
+  background-color: var(--color-bg-black);
+  color: var(--color-white);
+  flex-wrap: wrap;
+  margin-bottom: -1px;
+  z-index: 1000000;
+
+  @media (max-width: 800px) {
+    padding: 3.5rem 4rem 0 4rem;
+  }
+
+  &__nav-group {
+    display: flex;
+    gap: 1.5rem;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__cart-img {
+    filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(121deg)
+      brightness(104%) contrast(101%);
+    cursor: pointer;
+    &:hover {
+      filter: invert(72%) sepia(11%) saturate(4852%) hue-rotate(324deg)
+        brightness(88%) contrast(91%);
+    }
+  }
+
+  &__line {
+    flex-basis: 100%;
+    border-top: 1px solid var(--style-input-outline);
+    align-self: baseline;
+    margin-top: 3.5rem;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-weight: 700;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-orange-dark);
+    border-radius: 50%;
+    top: 2.5rem;
+    right: 7%;
+    pointer-events: none;
+
+    @media (max-width: 800px) {
+      right: 3.5%;
+    }
+
+    @media (max-width: 400px) {
+      right: 6%;
+    }
+  }
+
+  &__menu {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      display: block;
+    }
+  }
+
+  &__mobile-nav {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+      position: absolute;
+
+      background-color: var(--color-white);
+      top: 9rem;
+      left: 0;
+      border-radius: 0 0 var(--style-border-radius) var(--style-border-radius);
+    }
+  }
+
+  &__mobile-background {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color-gray-transparent);
+      z-index: 1;
+    }
+  }
+}

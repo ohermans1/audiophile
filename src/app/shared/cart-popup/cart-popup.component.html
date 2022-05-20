@@ -1,0 +1,40 @@
+<div class="cart-background"></div>
+<div class="cart-popup">
+  <div class="cart-popup__header-group">
+    <h5 class="cart-popup__header">
+      Cart <span class="cart-popup__count">({{ this.totalCartItems }})</span>
+    </h5>
+    <div
+      *ngIf="!this.noCartItems"
+      class="cart-popup__remove"
+      (click)="this.cartService.removeFromCart('all')"
+      (click)="this.totalCartItems = 0"
+    >
+      Remove all
+    </div>
+  </div>
+  <div class="cart-popup__items">
+    <span class="cart-popup__no-cart-items" *ngIf="this.noCartItems"
+      >Your cart is currently empty! Why not shop around.</span
+    >
+    <app-cart-popup-item
+      *ngFor="let item of this.cartService.items"
+      [item]="item"
+    ></app-cart-popup-item>
+  </div>
+  <div class="cart-popup__submit-group">
+    <div class="cart-popup__price-group" *ngIf="!this.noCartItems">
+      <span class="cart-popup__total">Total</span>
+      <span class="cart-popup__price"
+        >${{ this.numberWithCommas(this.totalCost) }}</span
+      >
+    </div>
+    <app-buttons
+      *ngIf="!this.noCartItems"
+      class="cart-popup__button"
+      [class]="'button-1 button-full-width'"
+      [content]="'Checkout'"
+      [routerLink]="'checkout'"
+    ></app-buttons>
+  </div>
+</div>

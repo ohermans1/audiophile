@@ -1,0 +1,9 @@
+<fieldset class="text-input">
+  <label class="text-input__label" for="name">{{ this.name }}</label>
+  <input
+    class="{{ this.class }}"
+    type="{{ this.type }}"
+    placeholder="Enter your {{ lowerCase(this.name) }}"
+    name="{{ lowerCase(this.name) }}"
+  />
+</fieldset>

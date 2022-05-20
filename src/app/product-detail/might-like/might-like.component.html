@@ -1,0 +1,10 @@
+
+<div class="might-like">
+  <h2 class="might-like__header">You may also like</h2>
+  <div class="might-like__card-group">
+    <app-might-like-card
+      *ngFor="let card of relatedProduct"
+      [cardData]="card"
+    ></app-might-like-card>
+  </div>
+</div>

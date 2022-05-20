@@ -1,0 +1,65 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  width: max-content;
+  border: none;
+
+  &:invalid &__label {
+    color: red;
+  }
+
+  &:invalid &__label::after {
+    display: block;
+  }
+
+  &__input {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    width: 30rem;
+    border: 1px solid var(--color-input-outline);
+    caret-color: var(--color-orange-dark);
+    color: var(--color-black);
+    border-radius: var(--style-border-radius);
+
+    &:active,
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 1px solid var(--color-orange-dark);
+    }
+
+    &:invalid {
+      border: 1.5px solid red;
+    }
+
+    &--large {
+      width: 62rem;
+
+      @media (max-width: 400px) {
+        width: 30rem;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    font-weight: 700;
+
+    &::after {
+      content: "Wrong format";
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: red;
+    }
+  }
+
+  &::placeholder {
+    font-size: inherit;
+    font-family: inherit;
+  }
+}

@@ -1,0 +1,24 @@
+.feature-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 3rem var(--style-body-padding);
+  padding: 11.75rem 10rem;
+  background-image: url(./../../../assets/home/desktop/image-speaker-zx7.jpg);
+  background-size: cover;
+  background-position: right;
+  border-radius: var(--style-border-radius);
+
+  @media (max-width: 800px) {
+        padding: 5rem 10rem;
+    background-image: url(./../../../assets/home/tablet/image-speaker-zx7.jpg);
+  }
+
+  @media (max-width: 400px) {
+    background-image: url(./../../../assets/home/mobile/image-speaker-zx7.jpg);
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+}

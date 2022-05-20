@@ -1,0 +1,18 @@
+<div class="feature-part">
+  <div class="feature-part__container">
+    <img
+      src="./../../../assets/home/desktop/image-earphones-yx1.jpg"
+      alt="Earphone"
+      class="feature-part__img"
+    />
+  </div>
+  <div class="feature-part__container feature-part__container--text">
+    <h3 class="feature-part__header">{{ this.product }}</h3>
+    <app-buttons
+      [class]="'button-2'"
+      [content]="'See product'"
+      routerLink="productDetail"
+      (click)="setProduct()"
+    ></app-buttons>
+  </div>
+</div>

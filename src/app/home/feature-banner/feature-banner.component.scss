@@ -1,0 +1,51 @@
+.feature-banner {
+  background: url(./../../../assets/home/desktop/image-hero.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: 0 var(--style-body-padding);
+  height: 63rem;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    background-position: 95% 50%;
+  }
+
+  @media (max-width: 600px) {
+    background-position: 85% 50%;
+  }
+  @media (max-width: 400px) {
+    background-position: 78% 50%;
+  }
+
+  &__text-group {
+    width: 37%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @media (max-width: 800px) {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__overline overline {
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    @media (max-width: 800px) {
+      width: 50%;
+    }
+
+    @media (max-width: 400px) {
+      width: 70%;
+    }
+  }
+
+  &__button {
+    margin-top: 2rem;
+  }
+}

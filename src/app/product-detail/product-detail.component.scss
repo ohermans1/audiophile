@@ -1,0 +1,117 @@
+.product-detail {
+  margin: 10rem var(--style-body-padding);
+
+  @media (max-width: 800px) {
+    margin: 4rem var(--style-body-padding);
+  }
+
+  &__back {
+    margin-bottom: 5rem;
+    display: inline-block;
+  }
+
+  &__container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+    @media (max-width: 800px) {
+      margin-bottom: 5rem;
+    }
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+    }
+  }
+
+  &__overline {
+    color: var(--color-orange-dark);
+    margin-bottom: 2rem;
+    display: inline-block;
+    justify-self: flex-start;
+  }
+  &__img {
+    border-radius: var(--style-border-radius);
+    width: 45%;
+
+    @media (max-width: 400px) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  &__add-to-cart-container {
+    width: 45%;
+    @media (max-width: 800px) {
+      width: 50%;
+    }
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
+  &__header {
+    margin-bottom: 3rem;
+  }
+  &__description {
+    margin-bottom: 3rem;
+  }
+  &__price {
+    margin-bottom: 4rem;
+    display: block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+  &__buttons-container {
+    display: flex;
+    gap: 2rem;
+  }
+  &__container-bottom {
+    display: flex;
+    align-items: flex-start;
+    gap: 10rem;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+  &__features-container {
+    width: 55%;
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+  }
+  &__features-header {
+    margin-bottom: 4rem;
+  }
+  &__features {
+    white-space: pre-line;
+  }
+  &__in-box-container {
+    @media (max-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+    }
+  }
+  &__in-box-header {
+    margin-bottom: 4rem;
+  }
+  &__box-items {
+  }
+  &__in-box-text {
+    display: flex;
+    gap: 3rem;
+    font-weight: 700;
+  }
+  &__in-box-num {
+    color: var(--color-orange-dark);
+    width: 2.5rem;
+  }
+
+  
+}
