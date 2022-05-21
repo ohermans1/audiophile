@@ -34,7 +34,7 @@ export class ProductService {
       'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.',
       2999,
       'product-xx99-mark-two-headphones\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg',
+      'assets/product-xx99-mark-two-headphones/desktop/image-product.jpg',
       [
         new InBox(1, 'Headphone Unit'),
         new InBox(2, 'Replacement Earcups'),
@@ -57,7 +57,7 @@ export class ProductService {
       'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.',
       1750,
       'product-xx99-mark-one-headphones\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg',
+      'assets/product-xx99-mark-one-headphones/desktop/image-product.jpg',
       [
         new InBox(1, 'Headphone Unit'),
         new InBox(2, 'Replacement Earcups'),
@@ -79,7 +79,7 @@ export class ProductService {
       'Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.',
       899,
       'product-xx59-headphones\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-xx59-headphones/desktop/image-product.jpg',
+      'assets/product-xx59-headphones/desktop/image-product.jpg',
       [
         new InBox(1, 'Headphone Unit'),
         new InBox(2, 'Replacement Earcups'),
@@ -102,7 +102,7 @@ export class ProductService {
       "Upgrade your sound system with the all new ZX9 active speaker. It's a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
       4500,
       'product-zx9-speaker\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-zx9-speaker/desktop/image-product.jpg',
+      'assets/product-zx9-speaker/desktop/image-product.jpg',
       [
         new InBox(2, 'Speaker Unit'),
         new InBox(2, 'Speaker Cloth Panel'),
@@ -125,7 +125,7 @@ export class ProductService {
       'Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.',
       3500,
       'product-zx7-speaker\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-zx7-speaker/desktop/image-product.jpg',
+      'assets/product-zx7-speaker/desktop/image-product.jpg',
       [
         new InBox(2, 'Speaker Unit'),
         new InBox(2, 'Speaker Cloth Panel'),
@@ -148,7 +148,7 @@ export class ProductService {
       'Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.',
       599,
       'product-yx1-earphones\\desktop\\image-category-page-preview.jpg',
-      './../../assets/product-yx1-earphones/desktop/image-product.jpg',
+      'assets/product-yx1-earphones/desktop/image-product.jpg',
       [
         new InBox(2, 'Earphone Unit'),
         new InBox(6, 'Multi-size Earplugs'),

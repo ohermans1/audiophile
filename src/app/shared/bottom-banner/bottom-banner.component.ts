@@ -11,9 +11,9 @@ export class BottomBannerComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   responsiveImage() {
     if (window.innerWidth > 800) {
-      this.image = './../../../assets/shared/desktop/image-best-gear.jpg';
+      this.image = 'assets/shared/desktop/image-best-gear.jpg';
     } else {
-      this.image = './../../../assets/shared/tablet/image-best-gear.jpg';
+      this.image = 'assets/shared/tablet/image-best-gear.jpg';
     }
   }
 
