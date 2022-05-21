@@ -16,8 +16,6 @@ export class CartService {
     this.populateItems();
   }
 
-  
-
   countTotal() {
     this.totalCartItems = 0;
     this.items.forEach((item) => {
@@ -81,6 +79,8 @@ export class CartService {
       this.items.forEach((item) => {
         item.count = 0;
         item.addedToCart = false;
+        this.totalCartItems = 0;
+        this.totalCost = 0;
       });
       return;
     }
