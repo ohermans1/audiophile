@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 1rem;
   position: relative;
-  width: max-content;
   border: none;
 
   &:invalid &__label {
@@ -17,12 +16,11 @@
   &__input {
     padding: 1.5rem;
     font-size: 1.4rem;
-    width: 30rem;
     border: 1px solid var(--color-input-outline);
     caret-color: var(--color-orange-dark);
     color: var(--color-black);
     border-radius: var(--style-border-radius);
-
+    width: 100%;
     &:active,
     &:focus,
     &:hover {
@@ -32,14 +30,6 @@
 
     &:invalid {
       border: 1.5px solid red;
-    }
-
-    &--large {
-      width: 62rem;
-
-      @media (max-width: 400px) {
-        width: 30rem;
-      }
     }
   }
 

@@ -13,11 +13,9 @@ import { CartService } from '../cartHandler.service';
   styleUrls: ['./cart-popup.component.scss'],
 })
 export class CartPopupComponent implements OnInit, DoCheck {
-  totalCartItems: number = 0;
+  totalCartItems: number = this.cartService.totalCartItems;
   totalCost: number = 0;
   noCartItems = true;
-
-  
 
   constructor(public cartService: CartService) {}
   ngOnInit(): void {}
@@ -35,11 +33,9 @@ export class CartPopupComponent implements OnInit, DoCheck {
   checkPrice() {
     let check = 0;
     let tempCost = 0;
-    let cartItems = 0;
     this.cartService.items.forEach((item) => {
       if (item.count > 0) {
         tempCost = tempCost + item.count * item.cost;
-        cartItems = cartItems + item.count;
         this.noCartItems = false;
         check++;
       }
@@ -48,7 +44,8 @@ export class CartPopupComponent implements OnInit, DoCheck {
       this.noCartItems = true;
     }
     this.totalCost = tempCost;
-    this.totalCartItems = cartItems;
     this.cartService.totalCost = tempCost;
+    this.cartService.countTotal();
+    this.totalCartItems = this.cartService.totalCartItems;
   }
 }

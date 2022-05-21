@@ -7,24 +7,42 @@
         <div class="checkout__form-section">
           <h6 class="checkout__header">Billing Details</h6>
           <div class="checkout__input-group">
-            <app-text-input [name]="'Name'"></app-text-input>
-            <app-text-input [type]="'email'" [name]="'Email'"></app-text-input>
-            <app-text-input [type]="'number'" [name]="'Phone'"></app-text-input>
+            <app-text-input
+              class="checkout__inputs"
+              [name]="'Name'"
+            ></app-text-input>
+            <app-text-input
+              class="checkout__inputs"
+              [type]="'email'"
+              [name]="'Email'"
+            ></app-text-input>
+            <app-text-input
+              class="checkout__inputs"
+              [type]="'number'"
+              [name]="'Phone'"
+            ></app-text-input>
           </div>
         </div>
         <div class="checkout__form-section">
           <h6 class="checkout__header">Shipping Info</h6>
           <div class="checkout__input-group">
             <app-text-input
-              [class]="'input text-input__input text-input__input--large'"
+              class="checkout__inputs checkout__inputs--large"
               [name]="'Address'"
             ></app-text-input>
             <app-text-input
+              class="checkout__inputs"
               [type]="'number'"
               [name]="'Postcode'"
             ></app-text-input>
-            <app-text-input [name]="'City'"></app-text-input>
-            <app-text-input [name]="'Country'"></app-text-input>
+            <app-text-input
+              class="checkout__inputs"
+              [name]="'City'"
+            ></app-text-input>
+            <app-text-input
+              class="checkout__inputs"
+              [name]="'Country'"
+            ></app-text-input>
           </div>
         </div>
         <div class="checkout__form-section">
@@ -33,16 +51,20 @@
             <app-radio-input
               [type]="'e-Money'"
               (sendValue)="recieveValue($event)"
+              class="checkout__inputs"
             ></app-radio-input>
             <app-radio-input
               [type]="'Cash'"
               (sendValue)="recieveValue($event)"
+              class="checkout__inputs"
             ></app-radio-input>
             <app-text-input
+              class="checkout__inputs"
               *ngIf="!this.cash"
               [name]="'e-Money Number'"
             ></app-text-input>
             <app-text-input
+              class="checkout__inputs"
               *ngIf="!this.cash"
               [name]="'e-Money PIN'"
             ></app-text-input>

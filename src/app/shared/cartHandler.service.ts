@@ -10,9 +10,19 @@ export class CartService {
   name!: string;
   count: number = 0;
   totalCost!: number;
+  totalCartItems: number = 0;
 
   constructor(public productService: ProductService) {
     this.populateItems();
+  }
+
+  
+
+  countTotal() {
+    this.totalCartItems = 0;
+    this.items.forEach((item) => {
+      this.totalCartItems = this.totalCartItems + item.count;
+    });
   }
 
   addData(items: any) {

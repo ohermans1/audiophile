@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/shared/product.service';
 })
 export class HeaderComponent implements OnInit, DoCheck {
   displayCart: boolean = this.cartService.displayCart;
-  displayCounter: boolean = this.cartService.displayCount;
+  displayCounter: boolean = this.showCount();
   showMenu: boolean = false;
 
   @HostListener('window:click', ['$event'])
@@ -59,5 +59,6 @@ export class HeaderComponent implements OnInit, DoCheck {
 
   ngDoCheck(): void {
     this.displayCart = this.cartService.displayCart;
+    this.displayCounter = this.showCount();
   }
 }
